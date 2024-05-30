@@ -13,26 +13,19 @@ const calculateBill = () => {
   tip = Number(tipInput.value) / 100;
   bill = bill * tip + bill;
   bill = bill / numberOfPeople;
-  billTotal.innerText = '$'+bill.toFixed(2);
+  billTotal.innerText = `$${bill.toFixed(2)}`;
 };
-
 // Increse people
 const increasePeople = () => {
   numberOfPeople += 1;
   peopleInput.innerText = numberOfPeople;
-  tip = Number(tipInput.value) / 100;
-  bill = (bill * tip) + bill;
-  bill = bill / numberOfPeople;
-  billTotal.innerText =bill;
+  calculateBill();
 };
 // Decrease people
 const decreasePeople = () => {
   if (numberOfPeople > 1) {
     numberOfPeople -= 1;
     peopleInput.innerText = numberOfPeople;
-    tip = Number(tipInput.value) / 100;
-    bill = bill * tip + bill;
-    bill = bill / numberOfPeople;
-    billTotal.innerText = '$'+bill.toFixed(2);
+    calculateBill();
   }
 };
