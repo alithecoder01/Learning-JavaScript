@@ -7,9 +7,9 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-// human wins - getResult('Rock', 'Scissors') 👉 1
-// human loses - getResult('Scissors', 'Rock') 👉 -1
-// human draws - getResult('Rock', 'Rock') 👉 0
+// human wins - getResult('Rock', 'Scissors')  1
+// human loses - getResult('Scissors', 'Rock')  -1
+// human draws - getResult('Rock', 'Rock')  0
 function getResult(playerChoice, computerChoice) {
   const choices = [`Rock`, `Paper`, `Scissors`];
   let score = 0;
